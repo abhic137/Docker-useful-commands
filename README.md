@@ -7,7 +7,16 @@ docker images -a
 docker tag <IMAGE_id> <TAG_Name>
 docker images -a
 ```
-downloading the image:
+downloading(saving locally) the image:
 ```
+sudo docker save -o <FILENAME>.tar <REPONAME>
 
 ```
+
+loading the image:
+```
+sudo docker load --input <FILENAME>.tar
+sudo docker tag <Image-ID> oai-gnb:latest # May not be needed
+
+```
+
