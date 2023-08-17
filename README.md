@@ -20,3 +20,11 @@ sudo docker tag <Image-ID> oai-gnb:latest # May not be needed
 
 ```
 
+pushing images in docker hub:
+```
+sudo docker login
+sudo docker images
+sudo docker tag <IMAGE_ID> USERNAME/REPONAME:TAG
+sudo docker push USERNAME/REPONAME 
+
+```
