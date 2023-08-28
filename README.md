@@ -38,6 +38,7 @@ Here's an example of how to use an entrypoint script:
     Create a file named entrypoint.sh and add the following content:
 
 bash
+
 ```
 #!/bin/bash
 
