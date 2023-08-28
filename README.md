@@ -28,6 +28,14 @@ sudo docker tag <IMAGE_ID> USERNAME/REPONAME:TAG
 sudo docker push USERNAME/REPONAME 
 
 ```
+# Build docker files
+for example if the docker file name is Dockerfile.Ryu
+
+then use the command to build it
+```
+sudo docker build -f Dockerfile.Ryu -t osrg/ryu:latest --network host .
+```
+
 # Entrypoint Scripts:
 
 An entrypoint script is a shell script or executable that is specified in your Docker image and is the first command that is executed when a container is started from that image. It's a way to ensure that certain setup or initialization tasks are performed before your application starts running.
