@@ -130,3 +130,29 @@ docker ps
 The --health-cmd, --health-interval, and --health-timeout flags in the docker run command allow you to customize the health check behavior.
 
 These are just basic examples to get you started with entrypoint scripts and health checks in Docker. In real-world scenarios, you might have more complex setup tasks and health checks tailored to your application's requirements.
+
+# A docker compose file with entrypoint-health script example demonstration
+```
+version: '3'
+services:
+  entrypoint-health-example:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MESSAGE=Hello from Docker Compose!
+    healthcheck:
+      test: ["CMD", "echo", "Health check passed."]
+      interval: 30s
+      timeout: 10s
+    ports:
+      - "8080:80"
+
+```
+```
+sudo docker-compose up -d
+```
+for downing 
+```
+sudo docker-compose down
+```
