@@ -32,10 +32,10 @@ sudo docker push USERNAME/REPONAME
 
 An entrypoint script is a shell script or executable that is specified in your Docker image and is the first command that is executed when a container is started from that image. It's a way to ensure that certain setup or initialization tasks are performed before your application starts running.
 
-Here's an example of how to use an entrypoint script:
+Here's an example of how to use an entrypoint script
 
     Create a new directory for your project and navigate to it.
-    Create a file named entrypoint.sh and add the following content:
+    Create a file named entrypoint.sh and add the following conten
 
 bash
 
