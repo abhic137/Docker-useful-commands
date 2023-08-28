@@ -54,7 +54,9 @@ bash
 echo "Initializing the application..."
 
 # Run the command provided as arguments (this is the CMD or overridden command)
+tail -f /dev/null
 exec "$@"
+
 ```
 - Make the script executable:
 
