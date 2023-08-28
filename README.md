@@ -48,13 +48,13 @@ echo "Initializing the application..."
 # Run the command provided as arguments (this is the CMD or overridden command)
 exec "$@"
 ```
-    Make the script executable:
+- Make the script executable:
 
 bash
 ```
 chmod +x entrypoint.sh
 ```
-    Create a Dockerfile in the same directory with the following content:
+- Create a Dockerfile in the same directory with the following content:
 
 Dockerfile
 ```
@@ -70,13 +70,13 @@ ENTRYPOINT ["entrypoint.sh"]
 # Default command to run if none is provided during container startup
 CMD ["echo", "Hello, Docker World!"]
 ```
-    Build the Docker image:
+- Build the Docker image:
 
 bash
 ```
 docker build -t entrypoint-example .
 ```
-    Run a container using the image:
+- Run a container using the image:
 
 bash
 ```
@@ -87,9 +87,9 @@ Now, when you run the container, it will execute the entrypoint.sh script first 
 
 Health checks are used to determine the health of a running container. They allow you to define a command or a script that is periodically run inside the container to check if the application is functioning properly. This is crucial for automated orchestration systems (like Kubernetes) to know when a container is ready to serve traffic.
 
-Here's an example of how to implement a basic health check:
+- Here's an example of how to implement a basic health check:
 
-    Update the Dockerfile to include a health check:
+- Update the Dockerfile to include a health check:
 
 Dockerfile
 ```
@@ -108,13 +108,13 @@ CMD ["echo", "Hello, Docker World!"]
 # Define a health check
 HEALTHCHECK --interval=30s --timeout=10s CMD echo "Health check passed."
 ```
-    Build the Docker image again:
+- Build the Docker image again:
 
 bash
 ```
 docker build -t health-check-example .
 ```
-    Run a container with the health check enabled:
+- Run a container with the health check enabled:
 
 bash
 ```
@@ -122,7 +122,7 @@ docker run --health-cmd="echo 'Custom health check command!'" --health-interval=
 ```
 In this example, the HEALTHCHECK instruction has been added to the Dockerfile. It specifies that every 30 seconds (as per --interval), Docker will run the provided command (in this case, echo "Health check passed."). If the command's exit status indicates success, the container is considered healthy; otherwise, it's marked as unhealthy.
 
-When you run the container, you can see the health status using:
+- When you run the container, you can see the health status using:
 
 bash
 ```
