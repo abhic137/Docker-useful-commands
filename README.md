@@ -34,8 +34,8 @@ An entrypoint script is a shell script or executable that is specified in your D
 
 Here's an example of how to use an entrypoint script
 
-    Create a new directory for your project and navigate to it.
-    Create a file named entrypoint.sh and add the following conten
+- Create a new directory for your project and navigate to it.
+- Create a file named entrypoint.sh and add the following content
 
 bash
 
